@@ -1,0 +1,20 @@
+  <div class="span10 header">
+    <div class="logo">
+      <img ng-click="logoClick()" src="views/images/RootsLogo.png" />
+     </div>
+    <div class="title">
+      <h1>Veggie Kart</h1>
+    </div>
+    <div class="logout">
+      <p>Welcome, {{user.data}}!</p>
+      <a ng-click="logout(); userLoggedIn.loggedIn = false">logout</a>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div ng-if="user.admin" class="span10 nav" ng-cloak>
+    <a href="/admin/dashboard" class="button">Dashboard</a>
+    <a href="/admin/salad" class="button">Salads</a>
+    <a href="/admin/reports" class="button">Analytics</a>
+  </div>
+  <div class="clearfix"></div>
+<!-- </div> -->
